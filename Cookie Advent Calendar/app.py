@@ -66,14 +66,8 @@ body {
 # ---------------------------------------------------------
 # Messages — You can customize these freely
 # ---------------------------------------------------------
-messages = {
-    i: {
-            "message": f"💜 Daily Momma love! You're my favorite princess boo.",
-        "image": None,
-        "audio": None
-    }
-    for i in range(1, 25)
-}
+messages = messages = load_messages_from_csv('messages.csv')
+
 
 # ---------------------------------------------------------
 # Header
@@ -152,3 +146,4 @@ if st.session_state.open_day:
 # ---------------------------------------------------------
 st.write("---")
 st.markdown("<div style='color:white;opacity:0.7;text-align:center;font-size:14px;'>Made with 💜 for someone special — SOUR style</div>", unsafe_allow_html=True)
+
